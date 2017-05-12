@@ -1,0 +1,13 @@
+{
+  "name": "EjemploReact",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "babel -w src -d build --source-maps inline & http-server -c-1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}
