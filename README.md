@@ -2,9 +2,11 @@
 
 # Installation
 
-clone project 
+clone project (git clone <your fork> <local name (optional)>)
 
-npm install
+go to local folder (cd <local name>)
+
+install dependecies (npm install)
 
 # Running 
 
