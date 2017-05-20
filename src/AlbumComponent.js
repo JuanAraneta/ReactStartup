@@ -15,6 +15,9 @@ export default class AlbumComponent extends React.Component{
 		.then((data) => {
 			return data.json();
 		}).then((track) => {
+			this.setState({
+				tracksList: []
+			});
 			track.items.forEach((items) => {
 	        	this.state.tracksList.push(items)
 	        })
