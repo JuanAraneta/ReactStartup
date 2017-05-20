@@ -8,7 +8,7 @@ export default class LittleAlbum extends React.Component{
 			image: '',
 		};
 		
-		
+
 	}
 
 	render(){
@@ -16,7 +16,7 @@ export default class LittleAlbum extends React.Component{
 				<div>
 					<li>
 						<p onClick={() => this.refs.child.getAlbumTracks()}>{this.props.name}</p>
-						<img src={this.props.images}/>
+						<img src={this.props.images} style={{width: 100, height: 100}}/>
 						<AlbumComponent ref='child' name={this.props.name} albumID={this.props.albumID}/>
 					</li>
 				</div>

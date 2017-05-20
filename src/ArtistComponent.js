@@ -7,6 +7,7 @@ export default class ArtistComponent extends React.Component{
 			name: '',
 			artistID: '',
 			albumsList: [],
+			albumAnterior: ""
 		};
 
 	}
@@ -17,12 +18,15 @@ export default class ArtistComponent extends React.Component{
 			return data.json();
 		}).then((album) => {
 			album.items.forEach((items) => {
-	        	this.state.albumsList.push(items)
+	        	items.available_markets.forEach((market) =>{
+	        		market=='US'?this.state.albumsList.push(items):null
+	        	})
 	        })
 	 
 			this.setState({
 				albumsList: this.state.albumsList 
 			});
+			console.log(this.state.albumsList)
 		})
 	}	
 
